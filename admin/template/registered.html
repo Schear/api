@@ -1,0 +1,74 @@
+<style>
+	input {
+		text-align:center;
+		background-color:#ECF0F1;
+		border:2px solid transparent;
+		border-radius:3px;
+		font-size:x-large;
+		font-weight:200;
+		padding:10px 0;
+		width:70%;
+		transition:border .5s;
+	}
+	.the {
+		font-size:x-large;
+		text-align:center;
+		height:50px;
+		color:#777;
+	}
+	.btn {
+		border:2px solid transparent;
+		background:#3498DB;
+		color:#ffffff;
+		font-size:xx-large;
+		line-height:25px;
+		padding:10px 0;
+		text-decoration:none;
+		text-shadow:none;
+		border-radius:3px;
+		box-shadow:none;
+		transition:0.25s;
+		display:block;
+		width:55%;
+		margin:0 auto;
+	}
+	.btn:hover {
+		background-color:#2980B9;
+	}
+	.login-screen {
+		background-color:#FFF;
+		padding:20px;
+		border-radius:5px
+	}
+	.login-form {
+		text-align:center;
+	}
+	.control-group {
+		margin-bottom:10px;
+	}
+	</style> 
+      <div class="login"> 
+          <div class="login-screen"> 
+            <div class="the"> 
+                  <h1>{xek:admin name="information"}</h1> 
+              </div> 
+              <form action="" method="post" role="form"> 
+              <input type="hidden" name="validation" value="" /> 
+                  <div class="login-form"> 
+                      <div class="control-group"> 
+                          <input placeholder="User" name="user" type="text"  value="{xek:admin name="user"}"> 
+                      </div> 
+                      <div class="control-group"> 
+                          <input placeholder="Email" name="email" type="text"  value="{xek:admin name="email"}"> 
+                      </div> 
+                      <div class="control-group"> 
+                          <input placeholder="Password" name="pass" type="password"  value="{xek:admin name="pass"}"> 
+                      </div> 
+                      <input class="btn btn-primary btn-large btn-block" name="registered" type="submit" value="注册"> 
+                      <br/> 
+                      <a href="http://{xek:path name="HOST"}/">返回首页</a>
+                      <a href="login.php?page=login">返回登陆</a> 
+                  </div> 
+              </form>
+        </div> 
+    </div> 

@@ -1,0 +1,14 @@
+欢迎使用希尔凯映射
+
+默认为8080端口如需修改请更改xek.cfg
+
+启动方式
+
+win
+用cd进入到该文件夹然后执行
+xek -config=xek.cfg start http
+
+linux
+用cd进入到该文件夹然后执行
+./xek -config=xek.cfg start http
+xek文件在linux下需要给予777权限

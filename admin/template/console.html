@@ -1,0 +1,51 @@
+{xek:admin name="admin_console"}
+<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                           {xek:cookie name="user"} <small>{xek:admin name="greetings"}</small>
+                        </h1>
+                    </div>
+                </div>              
+           <div class="row">         
+               <div class="col-md-6 col-sm-12 col-xs-12">                     
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            使用次数
+                        </div>
+                        <div class="panel-body">
+                            <div id="number"></div>
+                        </div>
+                    </div>            
+                </div>
+                
+           </div>
+    <script src="{xek:path name="JS_FOLDER"}morris/raphael-2.1.0.min.js"></script>
+    <script src="{xek:path name="JS_FOLDER"}morris/morris.js"></script>
+    <script>
+(function ($) {
+    "use strict";
+    var mainApp = {
+
+        initFunction: function () {
+			Morris.Bar({
+                element: 'number',
+                data: [
+				{xek:admin name="mainApp"}
+				],
+                xkey: 'm',
+                ykeys: ['a', 'b'],
+                labels: ['已使用', '未使用'],
+                hideHover: 'auto',
+                resize: true
+            });
+           
+        },
+
+    }
+    // Initializing ///
+    $(document).ready(function () {
+        mainApp.initFunction();
+    });
+}(jQuery));
+
+    </script>

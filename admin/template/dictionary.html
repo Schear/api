@@ -1,0 +1,46 @@
+{xek:admin name="admin_dictionary"}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            词库 <small>管理</small>
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+               
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             词库管理
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>问题</th>
+                                            <th>回复</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {xek:admin name="dictionary"}
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!--End Advanced Tables -->
+                </div>
+            </div>
+    <script src="{xek:path name="JS_FOLDER"}dataTables/jquery.dataTables.js"></script>
+    <script src="{xek:path name="JS_FOLDER"}dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>

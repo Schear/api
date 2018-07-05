@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<title>{xek:system name="xek_name"}The console</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{xek:path name="CSS_FOLDER"}bootstrap.css" rel="stylesheet" />
+    <link href="{xek:path name="CSS_FOLDER"}font-awesome.css" rel="stylesheet" />
+    <link href="{xek:path name="JS_FOLDER"}morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="{xek:path name="CSS_FOLDER"}custom-styles.css" rel="stylesheet" />
+    <script src="{xek:path name="JS_FOLDER"}jquery-1.10.2.js"></script>
+    <script src="{xek:path name="JS_FOLDER"}bootstrap.min.js"></script>
+    <script src="{xek:path name="JS_FOLDER"}jquery.metisMenu.js"></script>
+    <script>
+			$('#main-menu').metisMenu();
+			
+            $(window).bind("load resize", function () {
+                if ($(this).width() < 768) {
+                    $('div.sidebar-collapse').addClass('collapse')
+                } else {
+                    $('div.sidebar-collapse').removeClass('collapse')
+                }
+            });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">菜单</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">API控制台</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="http://{xek:path name="HOST"}/"><i class="fa fa-home fa-fw"></i> 网站主页</a>
+                        </li>
+                        <li><a href="{xek:path name="DOMAIN_FOLDER"}index.php?page=setup"><i class="fa fa-gear fa-fw"></i> 基本设置</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="{xek:path name="DOMAIN_FOLDER"}index.php?page=exit"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                {xek:admin name="head_menu"}
+                <li>
+                    <a href="http://{xek:path name="HOST"}/"><i class="fa fa-fw fa-home fa-fw"></i>网站主页</a>
+                </li>
+                <li>
+                    <a href="{xek:path name="DOMAIN_FOLDER"}index.php?page=exit"><i class="fa fa-sign-out fa-fw"></i>退出</a>
+                </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+<div id="page-wrapper" >
+            <div id="page-inner">

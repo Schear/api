@@ -1,0 +1,154 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">
+            基本
+            <small>
+                设置
+            </small>
+        </h1>
+    </div>
+</div>
+{xek:admin name="system_head"}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                全局设置
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <form action="index.php?page=setup" method="post" role="form">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>
+                                网站名字
+                            </label>
+                            <input class="form-control" type="text" name="xek_name" placeholder="网站名字" value="{xek:admin name="xek_name"}">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                网站公告
+                            </label>
+                            <textarea name="xek_announcement" class="form-control" placeholder="网站网站公告">{xek:admin name="xek_announcement"}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                网站地址
+                            </label>
+                            <input class="form-control" type="text" name="xek_basehost" placeholder="网站地址" value="{xek:admin name="xek_basehost"}">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                表单邮箱
+                            </label>
+                            <input class="form-control" type="text" name="xek_email" placeholder="表单邮箱" value="{xek:admin name="xek_email"}">
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>
+                                网站关键词
+                            </label>
+                            <input class="form-control" type="text" name="xek_keywords" placeholder="网站关键词" value="{xek:admin name="xek_keywords"}">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                网站介绍
+                            </label>
+                            <textarea name="xek_description" class="form-control" placeholder="网站介绍">{xek:admin name="xek_description"}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                SMTP服务器
+                            </label>
+                            <input class="form-control" type="text" name="xek_smtp" placeholder="SMTP服务器" value="{xek:admin name="xek_smtp"}">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                表单邮箱密码
+                            </label>
+                            <input class="form-control" type="text" name="xek_emailpass" placeholder="表单邮箱密码" value="{xek:admin name="xek_emailpass"}">
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <button type="submit" class="btn btn-default">
+                            提交
+                        </button>
+                        <button type="reset" class="btn btn-default">
+                            清空
+                        </button>
+                     </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{xek:admin name="system_footer"}
+<div class="row">
+    <div class="col-md-12">
+        <!-- Advanced Tables -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            {xek:admin name="information"}
+            <div class="panel-body">
+                <div class="row">
+                    <form action="index.php?page=setup" method="post" role="form">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>
+                                    账号
+                                </label>
+                                <input class="form-control" placeholder="{xek:admin name="user"}" disabled="">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    key
+                                </label>
+                                <input class="form-control" placeholder="{xek:admin name="keys"}" value="{xek:admin name="keys"}">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    密码
+                                </label>
+                                <input class="form-control" placeholder="pass" name="pass" type="password">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>
+                                    隶属组
+                                </label>
+                                <input class="form-control" placeholder="{xek:admin name="permissions"}" disabled="">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    邮箱
+                                </label>
+                                <input name="email" class="form-control" type="text" placeholder="email" value="{xek:admin name="email"}">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    手机
+                                </label>
+                                <input name="phone" type="text" class="form-control" placeholder="phone" value="{xek:admin name="phone"}">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                        <button type="submit" class="btn btn-default">
+                            提交
+                        </button>
+                        <button type="reset" class="btn btn-default">
+                            清空
+                        </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/dataTables/jquery.dataTables.js">
+</script>
+<script src="js/dataTables/dataTables.bootstrap.js">
+</script>

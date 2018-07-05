@@ -1,0 +1,333 @@
+ <script language="javascript">
+    var t = null;
+    t = setTimeout(time,1000);//开始执行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+       var h=dt.getHours();
+       var m=dt.getMinutes();
+       var s=dt.getSeconds();
+       document.getElementById("timeShow").innerHTML = h+":"+m+":"+s;
+       t = setTimeout(time,1000); //设定定时器，循环执行             
+    } 
+  </script>
+  {xek:admin name="win_head"}
+  <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: rgba(25, 147, 147, 0.1);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(25, 147, 147, 0.2);
+      }
+      #tupian{
+          bottom:3px;
+          position:absolute;
+          left:4px;
+      }
+      #contain{
+          width:90%;
+          height:100%;
+          margin:auto;
+          border-width:15px;
+          border-style:solid;
+          border-radius:30px;
+          border-color:#EFF7FF;
+          position:relative;
+          background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+          background-size:100% auto; 
+          background-position:center;
+      }
+      #content{
+          height:88%;
+          width:100%;
+          padding: 10px;
+          position:absolute;
+          font-family:"华文行楷";
+          font-size:5px;
+          overflow:auto;
+      
+      }
+      #chat_problem{
+          height:37px;
+          bottom: 4px;
+          position:absolute;
+          line-height: 37px;
+          width:80%;
+          left:10px;
+          font-size: 17px;
+          text-align: start;
+          overflow:auto;
+      }
+      
+      #chat_event{
+          left:auto;
+          right:3px;
+          bottom: 7px;
+          position:absolute;
+          font-size: 17px;
+          text-align:center;
+          bottom:5px;
+          position:absolute;
+      }
+      #chat_content{
+          width:100%;
+          height:40px;
+      }
+      /**聊天气泡以及头像框**/
+      .chat-thread li {
+        position: relative;
+        clear: both;
+        display: inline-block;
+        padding: 16px 40px 16px 20px;
+        margin: 0 0 20px 0;
+        font: 16px/20px 'Noto Sans', sans-serif;
+        border-radius: 10px;
+        background-color: rgba(25, 147, 147, 0.2);
+      }
+      
+      .chat-thread li:before {
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        content: '';
+      }
+      
+      .chat-thread li:after {
+        position: absolute;
+        top: 8px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid rgba(25, 147, 147, 0.2);
+      }
+      
+      .chat-thread li:nth-child(odd) {
+        float: right;
+        margin-right: 82px;
+        color: #0AD5C1;
+      }
+      
+      .chat-thread li:nth-child(odd):before {
+        right: -82px;
+        background-image: url('http://q2.qlogo.cn/headimg_dl?dst_uin=312224992&spec=100');
+		background-size:100% 100%;
+      }
+      
+      .chat-thread li:nth-child(odd):after {
+        border-right: 15px solid transparent;
+        right: -15px;
+      }
+      
+      .chat-thread li:nth-child(even) {
+        float: left;
+        margin-left: 81px;
+        color: #0EC879;
+      }
+      
+      .chat-thread li:nth-child(even):before {
+        left: -80px;
+        background-image: url({xek:path name="IMAGES_FOLDER"}portrait_pc2.jpg);
+      }
+      
+      .chat-thread li:nth-child(even):after {
+        border-left: 15px solid transparent;
+        left: -15px;
+      }
+  </style>
+  {xek:admin name="win_footer"}
+  {xek:admin name="phone_head"}
+  <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: rgba(25, 147, 147, 0.1);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(25, 147, 147, 0.2);
+      }
+      img{
+          width:30px;
+          height:30px;
+      }
+      #tupian{
+          bottom:3px;
+          position:absolute;
+          left:4px;
+      }
+      #contain{
+          width:100%;
+          height:100%;
+          margin:auto;
+          border-width:15px;
+          border-style:solid;
+          border-radius:30px;
+          border-color:#EFF7FF;
+          position:relative;
+          background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+          background-size:100% auto; 
+          background-position:center;
+      }
+      #content{
+          height:92%;
+          width:98%;
+          padding: 10px;
+          position:absolute;
+          font-family:"华文行楷";
+          font-size:5px;
+          overflow:auto;
+      
+      }
+      #chat_problem{
+          height:33px;
+          bottom: 4px;
+          position:absolute;
+          line-height: 37px;
+          width:78%;
+          left:1%;
+          font-size: 17px;
+          text-align: start;
+          overflow:auto;
+      }
+      
+      #chat_event{
+          left:auto;
+          right:3px;
+          bottom: 7px;
+          position:absolute;
+          font-size: 17px;
+          text-align:center;
+          bottom:3.515px;
+          position:absolute;
+          right:3px;
+      }
+      #chat_content{
+          width:100%;
+          height:40px;
+      }
+      /**聊天气泡以及头像框**/
+      .chat-thread li {
+        position: relative;
+        clear: both;
+        display: inline-block;
+        padding: 10px 20px 10px 10px;
+        margin: 0 0 10px 0;
+        font: 10px/14px 'Noto Sans', sans-serif;
+        border-radius: 10px;
+        background-color: rgba(25, 147, 147, 0.2);
+      }
+      
+      .chat-thread li:before {
+        position: absolute;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        content: '';
+      }
+      
+      .chat-thread li:after {
+        position: absolute;
+        top: 8px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 10px solid rgba(25, 147, 147, 0.2);
+      }
+      
+      .chat-thread li:nth-child(odd) {
+        float: right;
+        margin-right: 50px;
+        color: #0AD5C1;
+      }
+      
+      .chat-thread li:nth-child(odd):before {
+        right: -55px;
+        background-image: url('http://q2.qlogo.cn/headimg_dl?dst_uin=312224992&spec=100');
+		background-size:100% 100%;
+      }
+      
+      .chat-thread li:nth-child(odd):after {
+        border-right: 15px solid transparent;
+        right: -15px;
+      }
+      
+      .chat-thread li:nth-child(even) {
+        float: left;
+        margin-left: 55px;
+        color: #0EC879;
+      }
+      
+      .chat-thread li:nth-child(even):before {
+        left: -55px;
+        background-image: url({xek:path name="IMAGES_FOLDER"}portrait_pe2.jpg);
+      }
+      
+      .chat-thread li:nth-child(even):after {
+        border-left: 15px solid transparent;
+        left: -15px;
+      }
+  </style>
+  <script src="{xek:path name="JS_FOLDER"}jquery-1.10.2.js"></script>
+  {xek:admin name="phone_footer"}
+    <div class="row">
+        <div class="col-md-12" onLoad="showLeftTime()">
+            <h1 class="page-header">
+                聊天<small id="timeShow">-test</small>
+            </h1>
+        </div>
+    </div>
+    <div id="contain">
+        <div id="content">
+            <div id="chat_content" class="chat-thread" >
+                <li>{xek:admin name="output1"}</li>
+                <li>{xek:admin name="output2"}</li>
+            </div> 
+        </div>
+        <input type="text"  id="chat_problem" value="" class="form-control" onKeyDown="doKeyDown()">
+        <div id="chat_event"><a class="btn btn-default">发送</a></div>
+    </div>
+	<script Language="JavaScript">
+    var content      = document.getElementById('content');
+    var chat_content = document.getElementById('chat_content');
+    var chat_problem = document.getElementById('chat_problem');
+    var chat_event   = document.getElementById('chat_event');
+    var post         ={
+        launch:function() {
+            $.post(
+              'http://{xek:path name="HOST"}/api.php',
+              '{xek:admin name="json_url"}' + chat_problem.value,
+              function(data){
+                    chat_content.innerHTML   = chat_content.innerHTML + '<li>' + data + '</li>';
+                    content.scrollTop        = content.scrollHeight;
+               })
+            chat_content.innerHTML   = chat_content.innerHTML + '<li>' + chat_problem.value + '</li>';
+            content.scrollTop        = content.scrollHeight;
+            chat_problem.value       = '';
+        }
+    };
+    function doKeyDown() { 
+        if (event.keyCode == 13) {
+            post.launch();
+        };
+    }; 
+    window.onload = function(){
+        chat_event.onclick = function(){
+            post.launch();
+        };
+    };
+    </script>

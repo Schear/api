@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>{xek:error}</title>
+
+<style type="text/css">
+body{
+	background:url('http://{xek:path name="HOST"}/{xek:path name="IMAGES_FOLDER"}bg.png') no-repeat center center #1d1d1d;
+	color:#eee;
+	font-family:Corbel,Arial,Helvetica,sans-serif;
+	font-size:13px;
+}
+
+#rocket{
+	width:275px;
+	height:355px;
+	background:url('http://{xek:path name="HOST"}/{xek:path name="IMAGES_FOLDER"}rocket.png') no-repeat;
+	margin:30px auto 10px;
+	position:relative;
+}
+
+.steam1,
+.steam2{
+	position:absolute;
+	bottom:78px;
+	left:50px;
+	width:80px;
+	height:80px;
+	background:url('http://{xek:path name="HOST"}/{xek:path name="IMAGES_FOLDER"}steam.png') no-repeat;
+	opacity:0.8;
+}
+
+.steam2{
+
+
+	background-position:left bottom;
+}
+
+hgroup{
+
+	display:block;
+	margin:0 auto;
+	width:850px;
+	font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
+	text-align:center;
+}
+
+h1{
+	color:#76D7FB;
+	font-size:40px;
+	text-shadow:3px 3px 0 #3D606D;
+	white-space:nowrap;
+}
+
+h2{
+	color:#9FE3FC;
+	font-size:18px;
+	font-weight:normal;
+	padding-bottom:15px;
+}
+
+p.createdBy{
+	font-size:15px;
+	font-weight:normal;
+	margin:50px;
+	text-align:center;
+	text-shadow:none;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #97cae6;
+	color:#97cae6;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+</style>
+
+</head>
+<body style="text-align:center">
+<div id="rocket"></div>
+
+<hgroup>
+    <h1>You seems to be met 404 pages</h1>
+    
+    <h2>Error:{xek:error}</h2>
+</hgroup>
+
+<script src="http://{xek:path name="HOST"}/{xek:path name="JS_FOLDER"}jquery.min.js"></script>
+
+<script src="http://{xek:path name="HOST"}/{xek:path name="JS_FOLDER"}404.js"></script>
+
+<div style="margin-bottom:10px;text-align:center;">
+[             <a href="javascript:history.go(-1)">返 回 上 一 页</a>]
+[       <a href="http://{xek:path name="HOST"}/">首 页</a>        ]
+[<a href="javascript:" onClick="history.back(); ">返 回 上 一 页</a>]</div>
+<p style="text-align:center;">© 2014-2017 Schear.kai. All Rights Reserved.<br /><a href="//www.miibeian.gov.cn/">粤ICP备17053689号</a></p>
+</body>
+</html>
